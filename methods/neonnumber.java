@@ -1,0 +1,17 @@
+class neonnumber 
+{
+	public static void main(String[] args) 
+	{
+		int n=9;
+		int sum=0;
+		System.out.println(neon(n,n*n,sum));
+	}
+	public static boolean neon(int n,int s,int sum) 
+	{
+		if(s==0) return n==sum;
+		int r=s%10;
+		sum=r+sum;
+		s/=10;
+		return neon(n,s,sum);
+	}
+}

@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class d2b
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter a num:");
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+		System.out.println(d2b(n));
+	}
+	public static String d2b(int m){
+		String s="";
+		while(m>0){
+			int d=m%2;
+			s=d+s;
+			m/=2;
+		}
+		return s;
+	}
+	
+}

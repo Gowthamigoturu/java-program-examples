@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class strong 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter a num:");
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+		if(is_strong(n))
+		System.out.println("strong");
+		else System.out.println("not strong");
+	}
+	public static boolean is_strong(int m)
+	{
+		int sum=0;
+		int n=m;
+		while(m>0){
+			int d=m%10;
+			int prod=1;
+			for(int i=1;i<=d;i++){
+				prod=prod*i;
+			}
+			sum+=prod;
+			m/=10;
+		}
+		return n==sum;
+	}	
+}

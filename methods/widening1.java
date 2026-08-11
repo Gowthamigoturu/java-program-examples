@@ -1,0 +1,15 @@
+class widening1 
+{
+	public static void main(String[] args) 
+	{
+		byte b=10;
+		int i=b;
+		System.out.println(b+" "+i);
+		int n=20;
+		double d=n;
+		System.out.println(n+" "+d);
+		char ch='a';
+		int s=ch;
+		System.out.println(ch+" "+s);
+		}
+}

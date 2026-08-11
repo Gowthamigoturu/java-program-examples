@@ -1,0 +1,32 @@
+import java.util;
+class armstrong 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter a num:");
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+		if(is_armstrong(n,len(n)))
+		System.out.println("armstrong");
+		else System.out.println("not armstrong");
+	}
+	public static int len(int m)
+	{
+		int count=0;
+		while(m>0){
+			count++;
+			m/=10;
+		}
+		return count;
+	}
+	public static boolean is_armstrong(int m,int l)
+	{
+		int sum=0;
+		int n=m;
+		while(m>0){
+			sum+=Math.pow((m%10),r);
+			m/=10;
+		}
+		return n==sum;
+	}	
+}

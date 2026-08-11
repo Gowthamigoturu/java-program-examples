@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class reverse
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter a num:");
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+		System.out.println(rev(n));
+	}
+	public static int rev(int m){
+		int rev=0;
+		while(m>0){
+			rev=(rev*10)+(m%10);
+			m/=10;
+		}
+		return rev;
+	}
+}

@@ -1,0 +1,22 @@
+class strongnum 
+{
+	public static void main(String[] args) 
+	{
+		int n=149;
+		int m=n;
+		int sum=0;
+		System.out.println(strong(n,m,sum));
+	}
+	public static boolean strong(int n,int m,int sum)
+	{
+		if(n==0) return m==sum;
+		int r=n%10;
+		sum=sum+fact(r);
+		return strong(n/10,m,sum);
+	}
+	public static int fact(int r)
+		{
+			if(r==0) return 1;
+			return r*fact(r-1);
+		}
+}
